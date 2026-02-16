@@ -441,6 +441,5 @@ def render_all_ui():
     Gọi hàm này ở đầu mỗi trang sau inject_css() để render
     navbar + popups + chat FAB cùng lúc.
     """
-    render_navbar()
-    render_popups()
-    render_chat_fab()
+    
+    
