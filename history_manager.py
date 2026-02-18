@@ -6,36 +6,37 @@
 import json, os, hashlib
 from datetime import datetime
 
-HISTORY_FILE = "exam_history.json"
+HISTORY_FILE = "exam_history.json"  # Chỉ dùng làm backup offline
 MAX_HISTORY  = 500
 
 
 # ── Hash câu hỏi gốc (trước khi Groq paraphrase) ─────────
 def _hash_question(question_text: str) -> str:
-    """
-    Hash nội dung câu hỏi GỐC để so sánh.
-    Chuẩn hóa: lowercase, bỏ khoảng trắng thừa,
-    bỏ dấu câu cuối → tránh miss khi Groq sửa nhẹ.
-    """
-    text = question_text.strip().lower()
-    # Bỏ dấu câu cuối (. ? !)
-    text = text.rstrip(".?!")
-    # Chuẩn hóa khoảng trắng
+    text = question_text.strip().lower().rstrip(".?!")
     text = " ".join(text.split())
     return hashlib.md5(text.encode("utf-8")).hexdigest()[:16]
 
 
-# ── Firestore backend ─────────────────────────────────────
-def _firestore_get(subject: str, grade: str) -> set:
-    """Lấy set hash từ Firestore."""
+# ── Firestore helpers ─────────────────────────────────────
+def _get_db():
+    """Trả về (db, ok). Import lazy để tránh circular import."""
     try:
         from firebase_manager import _db, _FIREBASE_OK
-        if not _FIREBASE_OK or not _db:
-            return set()
-        key = f"{subject}|{grade}"
-        doc = _db.collection("exam_history").document(
-            key.replace("/", "_").replace(" ", "_")
-        ).get()
+        return _db, _FIREBASE_OK
+    except Exception:
+        return None, False
+
+
+def _doc_key(subject: str, grade: str) -> str:
+    return f"{subject}|{grade}".replace("/", "_").replace(" ", "_")
+
+
+def _firestore_get(subject: str, grade: str) -> set:
+    db, ok = _get_db()
+    if not ok or not db:
+        return set()
+    try:
+        doc = db.collection("exam_history").document(_doc_key(subject, grade)).get()
         if doc.exists:
             return set(doc.to_dict().get("hashes", []))
     except Exception:
@@ -43,24 +44,21 @@ def _firestore_get(subject: str, grade: str) -> set:
     return set()
 
 
-def _firestore_save(subject: str, grade: str, hashes: list):
-    """Lưu list hash lên Firestore."""
+def _firestore_save(subject: str, grade: str, hashes: list) -> bool:
+    db, ok = _get_db()
+    if not ok or not db:
+        return False
     try:
-        from firebase_manager import _db, _FIREBASE_OK
-        if not _FIREBASE_OK or not _db:
-            return
-        key = f"{subject}|{grade}"
-        _db.collection("exam_history").document(
-            key.replace("/", "_").replace(" ", "_")
-        ).set({
+        db.collection("exam_history").document(_doc_key(subject, grade)).set({
             "hashes":       hashes,
             "last_updated": datetime.now().isoformat(),
         })
+        return True
     except Exception:
-        pass
+        return False
 
 
-# ── Local JSON fallback ───────────────────────────────────
+# ── Local JSON (chỉ dùng khi Firestore không khả dụng) ───
 def _local_load() -> dict:
     if os.path.exists(HISTORY_FILE):
         try:
@@ -83,14 +81,13 @@ def _local_save(data: dict):
 def get_used_hashes(subject: str, grade: str) -> set:
     """
     Lấy set hash câu hỏi đã dùng.
-    Ưu tiên Firestore, fallback local JSON.
+    Ưu tiên Firestore, fallback local JSON nếu offline.
     """
-    # Thử Firestore trước
     fs_hashes = _firestore_get(subject, grade)
     if fs_hashes:
         return fs_hashes
 
-    # Fallback local
+    # Offline fallback
     data = _local_load()
     key  = f"{subject}|{grade}"
     return set(data.get(key, {}).get("hashes", []))
@@ -100,32 +97,33 @@ def save_exam(subject: str, grade: str, questions: list):
     """
     Lưu hash các câu hỏi GỐC vừa dùng.
     Gọi TRƯỚC khi Groq paraphrase để hash đúng câu gốc.
+    - Lưu Firestore trước (primary)
+    - Lưu JSON sau (backup offline)
     """
-    key        = f"{subject}|{grade}"
     new_hashes = [_hash_question(q["question"]) for q in questions]
 
-    # ── Cập nhật Firestore ────────────────────────────────
-    existing_fs = list(_firestore_get(subject, grade))
-    combined    = list(dict.fromkeys(existing_fs + new_hashes))
-    combined    = combined[-MAX_HISTORY:]
-    _firestore_save(subject, grade, combined)
+    # ── PRIMARY: Firestore ────────────────────────────────
+    existing = list(_firestore_get(subject, grade))
+    combined = list(dict.fromkeys(existing + new_hashes))[-MAX_HISTORY:]
+    saved_to_firestore = _firestore_save(subject, grade, combined)
 
-    # ── Cập nhật local (backup) ───────────────────────────
+    # ── BACKUP: Local JSON ────────────────────────────────
+    # Luôn ghi để có bản backup offline
+    key  = f"{subject}|{grade}"
     data = _local_load()
     if key not in data:
         data[key] = {"hashes": [], "last_updated": ""}
-    existing_local = data[key]["hashes"]
-    combined_local = list(dict.fromkeys(existing_local + new_hashes))
-    data[key]["hashes"]       = combined_local[-MAX_HISTORY:]
+    combined_local = list(dict.fromkeys(data[key]["hashes"] + new_hashes))[-MAX_HISTORY:]
+    data[key]["hashes"]       = combined_local
     data[key]["last_updated"] = datetime.now().strftime("%Y-%m-%d %H:%M")
     _local_save(data)
 
+    if not saved_to_firestore:
+        print("[exam_history] ⚠️  Firestore không khả dụng, chỉ lưu local JSON.")
+
 
 def filter_new_questions(questions: list, used_hashes: set) -> list:
-    """
-    Lọc câu chưa xuất hiện.
-    So sánh hash câu GỐC (trước Groq paraphrase).
-    """
+    """Lọc câu chưa xuất hiện dựa trên hash câu gốc."""
     return [
         q for q in questions
         if _hash_question(q["question"]) not in used_hashes
@@ -133,22 +131,21 @@ def filter_new_questions(questions: list, used_hashes: set) -> list:
 
 
 def clear_history(subject: str = None, grade: str = None):
-    """Xóa lịch sử — toàn bộ hoặc theo môn+lớp."""
-    # Xóa Firestore
-    try:
-        from firebase_manager import _db, _FIREBASE_OK
-        if _FIREBASE_OK and _db:
-            if subject and grade:
-                key = f"{subject}|{grade}".replace("/","_").replace(" ","_")
-                _db.collection("exam_history").document(key).delete()
-            else:
-                docs = _db.collection("exam_history").stream()
-                for doc in docs:
-                    doc.reference.delete()
-    except Exception:
-        pass
+    """Xóa lịch sử — toàn bộ hoặc theo môn+lớp (cả Firestore lẫn local)."""
+    db, ok = _get_db()
 
-    # Xóa local
+    # Xóa Firestore
+    if ok and db:
+        try:
+            if subject and grade:
+                db.collection("exam_history").document(_doc_key(subject, grade)).delete()
+            else:
+                for doc in db.collection("exam_history").stream():
+                    doc.reference.delete()
+        except Exception as e:
+            print(f"[exam_history] Lỗi xóa Firestore: {e}")
+
+    # Xóa local JSON
     data = _local_load()
     if subject and grade:
         data.pop(f"{subject}|{grade}", None)
@@ -159,20 +156,18 @@ def clear_history(subject: str = None, grade: str = None):
 
 def get_history_stats() -> dict:
     """Thống kê số câu đã lưu theo môn+lớp."""
-    stats = {}
+    db, ok = _get_db()
 
-    # Lấy từ Firestore
-    try:
-        from firebase_manager import _db, _FIREBASE_OK
-        if _FIREBASE_OK and _db:
-            docs = _db.collection("exam_history").stream()
-            for doc in docs:
-                d = doc.to_dict()
-                stats[doc.id.replace("_", " ", 1)] = len(d.get("hashes", []))
+    # Lấy từ Firestore (primary)
+    if ok and db:
+        try:
+            stats = {}
+            for doc in db.collection("exam_history").stream():
+                stats[doc.id.replace("_", "|", 1)] = len(doc.to_dict().get("hashes", []))
             if stats:
                 return stats
-    except Exception:
-        pass
+        except Exception:
+            pass
 
     # Fallback local
     data = _local_load()
