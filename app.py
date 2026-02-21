@@ -1,5 +1,6 @@
 # ============================================================
-# app.py — Entry point (Optimized Logic - Kept All CSS/UI)
+# app.py — Entry point  |  streamlit run app.py
+# Responsive: Desktop 2-col | Mobile hero-top + form-bottom
 # ============================================================
 import time
 import streamlit as st
@@ -12,14 +13,6 @@ from teacher_pages   import show_teacher_dashboard
 from profile_page    import show_profile
 from settings_page   import show_settings, get_label
 from chatbox_page    import show_chatbox
-
-# --- PHẦN TỐI ƯU LOGIC ---
-from assignment_manager import get_pending_assignments
-
-@st.cache_data(ttl=300) # Cache bài tập trong 5 phút để tránh lag khi click
-def get_pending_assignments_cached(username):
-    return get_pending_assignments(username)
-# -------------------------
 
 st.set_page_config(page_title="AI Exam Generator", page_icon="🎓", layout="wide")
 
@@ -52,10 +45,8 @@ for k, v in _DEFAULTS.items():
 
 
 def _restore_session():
-    # TỐI ƯU: Nếu đã có thông tin rồi thì không gọi Firebase nữa
-    if st.session_state.get("uid") and st.session_state.get("username"):
+    if st.session_state.get("uid"):
         return
-        
     params = st.query_params
     uid  = params.get("uid")
     role = params.get("role")
@@ -90,16 +81,13 @@ def _save_session():
     role = st.session_state.get("role")
     if not uid or not role:
         return
-    # Chỉ update nếu khác với params hiện tại để tránh lag
-    if st.query_params.get("uid") != uid:
-        params = {"uid": uid, "role": role}
-        if role == "teacher":
-            params["uname"] = st.session_state.get("username","")
-        st.query_params.update(params)
+    params = {"uid": uid, "role": role}
+    if role == "teacher":
+        params["uname"] = st.session_state.get("username","")
+    st.query_params.update(params)
 
 def _clear_session():
     st.query_params.clear()
-    st.cache_data.clear() # Xóa bộ nhớ đệm khi đăng xuất
 
 _restore_session()
 _save_session()
@@ -158,7 +146,6 @@ if st.session_state.page == "login":
     from firebase_manager import login, register, reset_password, is_firebase_ok
     from config           import TEACHER_CODE, GRADE_CONFIG, SUBJECT_OPTIONS
 
-    # GIỮ NGUYÊN TOÀN BỘ CSS CỦA BẠN DƯỚI ĐÂY
     st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
@@ -348,8 +335,8 @@ header[data-testid="stHeader"],
 .fd{color:rgba(255,255,255,.4);font-size:.72rem;line-height:1.4}
 .stats{display:flex;gap:0;justify-content:center;margin-top:1.8rem;padding-top:1.5rem;
     border-top:1px solid rgba(255,255,255,.07)}
-.stats .stat{flex:1;text-align:center;padding:0 .5rem;border-right:1px solid rgba(255,255,255,.07)}
-.stats .stat:last-child{border-right:none}
+.stat{flex:1;text-align:center;padding:0 .5rem;border-right:1px solid rgba(255,255,255,.07)}
+.stat:last-child{border-right:none}
 .sn{color:#a5b4fc;font-size:1.15rem;font-weight:800;display:block}
 .sl{color:rgba(255,255,255,.32);font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.6px}
 .hfooter{position:absolute;bottom:.9rem;left:50%;transform:translateX(-50%);
@@ -436,7 +423,7 @@ div[data-testid="stMultiSelect"] > div > div{
 </style>
 """, unsafe_allow_html=True)
 
-    # GIỮ NGUYÊN TOÀN BỘ HERO PANEL VÀ SCRIPT CỦA BẠN DƯỚI ĐÂY
+    # ── Hero panel ────────────────────────────────────────
     st.markdown("""
 <div class="hero-panel">
   <div class="hero-bg"></div>
@@ -585,6 +572,9 @@ div[data-testid="stMultiSelect"] > div > div{
                     else:  st.error(msg)
 
         with tab_rs:
+            st.markdown('<p style="color:#9ca3af;font-size:.82rem;margin:.4rem 0 .7rem">'
+                        'Nhập email đã đăng ký, chúng tôi sẽ gửi link đặt lại mật khẩu.</p>',
+                        unsafe_allow_html=True)
             rst_e = st.text_input("📧 Email đã đăng ký", key="rst_email", placeholder="email@example.com")
             if st.button("📨 Gửi email đặt lại", use_container_width=True, key="btn_reset"):
                 if not rst_e.strip(): st.error("Vui lòng nhập email!")
@@ -638,7 +628,9 @@ if st.session_state.role == "teacher":
             st.rerun()
         st.caption("v8.0 · Groq AI")
 
+    # Render mobile UI cho giáo viên
     render_all_ui()
+
     if st.session_state.get("teacher_tab") == "courses":
         show_teacher_courses()
     else:
@@ -647,17 +639,15 @@ if st.session_state.role == "teacher":
 
 # ── HỌC SINH ─────────────────────────────────────────────
 if st.session_state.role == "student":
-    # TỐI ƯU: Sử dụng hàm CACHED để không hỏi Firebase liên tục ở mỗi lần click
-    pending = get_pending_assignments_cached(st.session_state.username)
-    
-    if pending:
-        required = [a for a in pending if a.get("is_required")]
-        remind   = [a for a in pending if not a.get("is_required")]
-        st.session_state["remind_assignments"] = remind
-        if required and st.session_state.page not in ("exam","result","urgent_exam"):
-            st.session_state["current_assignment"] = required[0]
-            st.session_state.page = "urgent_exam"
-            st.rerun()
+    from assignment_manager import get_pending_assignments
+    pending  = get_pending_assignments(st.session_state.username)
+    required = [a for a in pending if a["is_required"]]
+    remind   = [a for a in pending if not a["is_required"]]
+    st.session_state["remind_assignments"] = remind
+    if required and st.session_state.page not in ("exam","result","urgent_exam"):
+        st.session_state["current_assignment"] = required[0]
+        st.session_state.page = "urgent_exam"
+        st.rerun()
 
 if st.session_state.page == "urgent_exam":
     render_sidebar()
@@ -669,4 +659,3 @@ render_sidebar()
 render_all_ui()
 _ROUTER.get(st.session_state.page, show_home)()
 render_support_popup()
-
