@@ -1,48 +1,30 @@
 # ============================================================
-# firebase_manager.py — Firebase Auth + Firestore
-# pip install firebase-admin requests
+# firebase_manager.py — Firebase Auth REST + Firestore REST
+# KHÔNG dùng firebase-admin SDK → không cần service account
 # ============================================================
 import json, requests, os
 import streamlit as st
 
-# ── Firebase Admin SDK (Firestore) ────────────────────────
-try:
-    import firebase_admin
-    from firebase_admin import credentials, firestore, auth as fb_auth
+_FIREBASE_OK = False   # Admin SDK không dùng
+_db          = None    # Giữ None để các file khác không bị lỗi
 
-    _sa = None
-    if not firebase_admin._apps:
-        from config import FIREBASE_SERVICE_ACCOUNT
-        if os.path.exists(FIREBASE_SERVICE_ACCOUNT):
-            _sa = credentials.Certificate(FIREBASE_SERVICE_ACCOUNT)
-        else:
-            # Đọc từ biến môi trường dạng JSON string
-            sa_json = os.environ.get("FIREBASE_SA_JSON", "")
-            if sa_json:
-                _sa = credentials.Certificate(json.loads(sa_json))
+# ── Đọc config ───────────────────────────────────────────
+from config import FIREBASE_CONFIG
+_API_KEY    = FIREBASE_CONFIG["apiKey"]
+_PROJECT_ID = FIREBASE_CONFIG["projectId"]
 
-        if _sa:
-            firebase_admin.initialize_app(_sa)
-
-    _db = firestore.client() if firebase_admin._apps else None
-    _FIREBASE_OK = _db is not None
-
-except Exception as e:
-    _FIREBASE_OK = False
-    _db          = None
-    print(f"[Firebase] Không kết nối được: {e}")
+_FIRESTORE_BASE = (
+    f"https://firestore.googleapis.com/v1/"
+    f"projects/{_PROJECT_ID}/databases/(default)/documents"
+)
 
 
-# ── Firebase Auth REST API (đăng ký / đăng nhập) ─────────
+# ── Firebase Auth REST ────────────────────────────────────
 def _auth_url(endpoint: str) -> str:
-    from config import FIREBASE_CONFIG
-    key = FIREBASE_CONFIG["apiKey"]
-    base = "https://identitytoolkit.googleapis.com/v1/accounts"
-    return f"{base}:{endpoint}?key={key}"
+    return f"https://identitytoolkit.googleapis.com/v1/accounts:{endpoint}?key={_API_KEY}"
 
 
 def _auth_post(endpoint: str, payload: dict) -> tuple[dict, str]:
-    """Gọi Firebase Auth REST. Trả về (data, error_message)."""
     try:
         r = requests.post(_auth_url(endpoint), json=payload, timeout=10)
         data = r.json()
@@ -56,13 +38,13 @@ def _auth_post(endpoint: str, payload: dict) -> tuple[dict, str]:
 
 def _translate_error(msg: str) -> str:
     MAP = {
-        "EMAIL_EXISTS":              "Email đã được đăng ký!",
-        "INVALID_EMAIL":             "Email không hợp lệ!",
-        "WEAK_PASSWORD":             "Mật khẩu quá yếu (tối thiểu 6 ký tự)!",
-        "EMAIL_NOT_FOUND":           "Email chưa đăng ký!",
-        "INVALID_PASSWORD":          "Mật khẩu không đúng!",
-        "INVALID_LOGIN_CREDENTIALS": "Email hoặc mật khẩu không đúng!",
-        "USER_DISABLED":             "Tài khoản đã bị vô hiệu hóa!",
+        "EMAIL_EXISTS":               "Email đã được đăng ký!",
+        "INVALID_EMAIL":              "Email không hợp lệ!",
+        "WEAK_PASSWORD":              "Mật khẩu quá yếu (tối thiểu 6 ký tự)!",
+        "EMAIL_NOT_FOUND":            "Email chưa đăng ký!",
+        "INVALID_PASSWORD":           "Mật khẩu không đúng!",
+        "INVALID_LOGIN_CREDENTIALS":  "Email hoặc mật khẩu không đúng!",
+        "USER_DISABLED":              "Tài khoản đã bị vô hiệu hóa!",
         "TOO_MANY_ATTEMPTS_TRY_LATER":"Quá nhiều lần thử, vui lòng thử lại sau!",
     }
     for k, v in MAP.items():
@@ -71,83 +53,147 @@ def _translate_error(msg: str) -> str:
     return msg
 
 
+# ── Firestore REST helpers ────────────────────────────────
+def _fs_get(collection: str, doc_id: str, id_token: str) -> dict | None:
+    """Đọc 1 document từ Firestore bằng idToken."""
+    url = f"{_FIRESTORE_BASE}/{collection}/{doc_id}"
+    try:
+        r = requests.get(
+            url,
+            headers={"Authorization": f"Bearer {id_token}"},
+            timeout=8
+        )
+        if r.status_code == 200:
+            return _fs_parse(r.json())
+        if r.status_code == 404:
+            return None
+    except Exception as e:
+        print(f"[Firestore GET] {e}")
+    return None
+
+
+def _fs_set(collection: str, doc_id: str, data: dict, id_token: str):
+    """Ghi / merge document vào Firestore bằng idToken."""
+    url = f"{_FIRESTORE_BASE}/{collection}/{doc_id}"
+    body = {"fields": _fs_encode(data)}
+    try:
+        requests.patch(
+            url,
+            headers={
+                "Authorization": f"Bearer {id_token}",
+                "Content-Type":  "application/json",
+            },
+            json=body,
+            timeout=8
+        )
+    except Exception as e:
+        print(f"[Firestore SET] {e}")
+
+
+def _fs_encode(data: dict) -> dict:
+    """Chuyển dict Python → Firestore field format."""
+    fields = {}
+    for k, v in data.items():
+        if isinstance(v, str):
+            fields[k] = {"stringValue": v}
+        elif isinstance(v, bool):
+            fields[k] = {"booleanValue": v}
+        elif isinstance(v, int):
+            fields[k] = {"integerValue": str(v)}
+        elif isinstance(v, float):
+            fields[k] = {"doubleValue": v}
+        elif isinstance(v, list):
+            fields[k] = {"arrayValue": {"values": [
+                {"stringValue": i} if isinstance(i, str) else {"integerValue": str(i)}
+                for i in v
+            ]}}
+        elif v is None:
+            fields[k] = {"nullValue": None}
+        else:
+            fields[k] = {"stringValue": str(v)}
+    return fields
+
+
+def _fs_parse(doc: dict) -> dict:
+    """Chuyển Firestore document → dict Python."""
+    result = {}
+    for k, v in doc.get("fields", {}).items():
+        if "stringValue"  in v: result[k] = v["stringValue"]
+        elif "booleanValue" in v: result[k] = v["booleanValue"]
+        elif "integerValue" in v: result[k] = int(v["integerValue"])
+        elif "doubleValue"  in v: result[k] = v["doubleValue"]
+        elif "nullValue"    in v: result[k] = None
+        elif "arrayValue"   in v:
+            vals = v["arrayValue"].get("values", [])
+            result[k] = [
+                list(i.values())[0] if i else None
+                for i in vals
+            ]
+    return result
+
+
 # ── Đăng ký ──────────────────────────────────────────────
 def register(email: str, password: str, display_name: str,
              grade: str, favorite_subjects: list) -> tuple[bool, str]:
-    """
-    Đăng ký tài khoản mới.
-    Trả về (success, message).
-    """
     data, err = _auth_post("signUp", {
         "email": email, "password": password, "returnSecureToken": True
     })
     if err:
         return False, err
 
-    uid = data.get("localId", "")
+    uid      = data.get("localId", "")
+    id_token = data.get("idToken", "")
 
-    # Lưu profile vào Firestore
-    if _FIREBASE_OK and uid:
-        try:
-            _db.collection("users").document(uid).set({
-                "uid":               uid,
-                "email":             email,
-                "display_name":      display_name,
-                "grade":             grade,
-                "favorite_subjects": favorite_subjects,
-                "role":              "student",
-                "created_at":        firestore.SERVER_TIMESTAMP,
-            })
-        except Exception as e:
-            return False, f"Tạo profile thất bại: {e}"
+    if uid and id_token:
+        _fs_set("users", uid, {
+            "uid":               uid,
+            "email":             email,
+            "display_name":      display_name,
+            "grade":             grade,
+            "favorite_subjects": favorite_subjects,
+            "role":              "student",
+        }, id_token)
 
     return True, "Đăng ký thành công!"
 
 
 # ── Đăng nhập ─────────────────────────────────────────────
 def login(email: str, password: str) -> tuple[bool, str, dict]:
-    """
-    Đăng nhập.
-    Trả về (success, message, user_info).
-    """
     data, err = _auth_post("signInWithPassword", {
         "email": email, "password": password, "returnSecureToken": True
     })
     if err:
         return False, err, {}
 
-    uid = data.get("localId", "")
+    uid      = data.get("localId", "")
+    id_token = data.get("idToken", "")
 
-    # Lấy profile từ Firestore
     user_info = {
-        "uid":           uid,
-        "email":         email,
-        "display_name":  data.get("displayName", email.split("@")[0]),
-        "grade":         "",
+        "uid":               uid,
+        "email":             email,
+        "display_name":      data.get("displayName", email.split("@")[0]),
+        "grade":             "",
         "favorite_subjects": [],
-        "role":          "student",
+        "role":              "student",
+        "_id_token":         id_token,           # lưu vào session_state để update_profile dùng sau
     }
 
-    if _FIREBASE_OK and uid:
-        try:
-            doc = _db.collection("users").document(uid).get()
-            if doc.exists:
-                profile = doc.to_dict()
-                user_info.update({
-                    "display_name":      profile.get("display_name", user_info["display_name"]),
-                    "grade":             profile.get("grade", ""),
-                    "favorite_subjects": profile.get("favorite_subjects", []),
-                    "role":              profile.get("role", "student"),
-                })
-        except Exception as e:
-            print(f"[Firebase] Lấy profile lỗi: {e}")
+    # Lấy profile từ Firestore REST — timeout 8s, không crash nếu lỗi
+    if uid and id_token:
+        profile = _fs_get("users", uid, id_token)
+        if profile:
+            user_info.update({
+                "display_name":      profile.get("display_name", user_info["display_name"]),
+                "grade":             profile.get("grade", ""),
+                "favorite_subjects": profile.get("favorite_subjects", []),
+                "role":              profile.get("role", "student"),
+            })
 
     return True, "Đăng nhập thành công!", user_info
 
 
-# ── Đổi mật khẩu ─────────────────────────────────────────
+# ── Đặt lại mật khẩu ─────────────────────────────────────
 def reset_password(email: str) -> tuple[bool, str]:
-    """Gửi email đặt lại mật khẩu."""
     _, err = _auth_post("sendOobCode", {
         "requestType": "PASSWORD_RESET", "email": email
     })
@@ -158,19 +204,24 @@ def reset_password(email: str) -> tuple[bool, str]:
 
 # ── Cập nhật profile ──────────────────────────────────────
 def update_profile(uid: str, display_name: str = None,
-                   grade: str = None, favorite_subjects: list = None) -> bool:
-    if not (_FIREBASE_OK and uid):
+                   grade: str = None,
+                   favorite_subjects: list = None) -> bool:
+    """Dùng idToken lưu trong session_state."""
+    import streamlit as st
+    id_token = st.session_state.get("_id_token", "")
+    if not uid or not id_token:
         return False
+
     update = {}
     if display_name      is not None: update["display_name"]      = display_name
     if grade             is not None: update["grade"]             = grade
     if favorite_subjects is not None: update["favorite_subjects"] = favorite_subjects
-    try:
-        _db.collection("users").document(uid).update(update)
-        return True
-    except Exception:
-        return False
+
+    if update:
+        _fs_set("users", uid, update, id_token)
+    return True
 
 
 def is_firebase_ok() -> bool:
-    return _FIREBASE_OK
+    """Luôn True vì chỉ dùng REST API (không cần Admin SDK)."""
+    return bool(_API_KEY)
