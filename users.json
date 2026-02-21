@@ -1,0 +1,2203 @@
+{
+  "Tran Le Tuan Anh": {
+    "created_at": "2026-02-14 14:47",
+    "exams": [
+      {
+        "id": "TRAN_20260214144801",
+        "date": "2026-02-14 14:48",
+        "subject": "Ngữ Văn",
+        "grade": "Lớp 10 (THPT)",
+        "score": 7,
+        "total": 20,
+        "pct": 35,
+        "time_sec": 20,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Tác phẩm 'Lửa thiêng' của Xuân Diệu được sáng tác vào năm nào?",
+            "correct": "1938",
+            "user_ans": "1940",
+            "is_right": false
+          },
+          {
+            "no": 2,
+            "question": "Thơ 'Tố Hữu' thường sử dụng biện pháp tu từ nào để thể hiện tình cảm yêu nước?",
+            "correct": "Điệp lại",
+            "user_ans": "Điệp lại",
+            "is_right": true
+          },
+          {
+            "no": 3,
+            "question": "Tác phẩm 'Lòng ta là những bờ sông' của Huy Cận được sáng tác vào năm nào?",
+            "correct": "1940",
+            "user_ans": "1945",
+            "is_right": false
+          },
+          {
+            "no": 4,
+            "question": "Thơ 'Hàn Mặc Tử' thường có phong cách ngôn ngữ như thế nào?",
+            "correct": "Romantic",
+            "user_ans": "Làm theo thể thơ truyền thống",
+            "is_right": false
+          },
+          {
+            "no": 5,
+            "question": "Tác phẩm 'Chiều một mình' của Xuân Diệu được sáng tác vào năm nào?",
+            "correct": "1936",
+            "user_ans": "1940",
+            "is_right": false
+          },
+          {
+            "no": 6,
+            "question": "Thơ 'Chế Lan Viên' thường sử dụng biện pháp tu từ nào để thể hiện tình cảm?",
+            "correct": "Nhân hóa",
+            "user_ans": "Nhân hóa",
+            "is_right": true
+          },
+          {
+            "no": 7,
+            "question": "Tác phẩm 'Đường tới giải phóng' của Tố Hữu được sáng tác vào năm nào?",
+            "correct": "1945",
+            "user_ans": "1947",
+            "is_right": false
+          },
+          {
+            "no": 8,
+            "question": "Thơ 'Quang Dũng' thường có chủ đề nào?",
+            "correct": "Kháng chiến",
+            "user_ans": "Tình yêu",
+            "is_right": false
+          },
+          {
+            "no": 9,
+            "question": "Tác phẩm 'Thơ mới' của Xuân Diệu được sáng tác vào năm nào?",
+            "correct": "1932",
+            "user_ans": "1934",
+            "is_right": false
+          },
+          {
+            "no": 10,
+            "question": "Thơ 'Huy Cận' thường sử dụng biện pháp tu từ nào để thể hiện tình cảm?",
+            "correct": "So sánh",
+            "user_ans": "So sánh",
+            "is_right": true
+          },
+          {
+            "no": 11,
+            "question": "Tác phẩm 'Gió lộng' của Hàn Mặc Tử được sáng tác vào năm nào?",
+            "correct": "1936",
+            "user_ans": "1936",
+            "is_right": true
+          },
+          {
+            "no": 12,
+            "question": "Thơ 'Tố Hữu' thường có phong cách ngôn ngữ như thế nào?",
+            "correct": "Hình tượng",
+            "user_ans": "Hình tượng",
+            "is_right": true
+          },
+          {
+            "no": 13,
+            "question": "Tác phẩm 'Đêm nay Bác không ngủ' của Hàn Mặc Tử được sáng tác vào năm nào?",
+            "correct": "1940",
+            "user_ans": "1940",
+            "is_right": true
+          },
+          {
+            "no": 14,
+            "question": "Thơ 'Chế Lan Viên' thường có chủ đề nào?",
+            "correct": "Tình yêu",
+            "user_ans": "Bản thân",
+            "is_right": false
+          },
+          {
+            "no": 15,
+            "question": "Tác phẩm 'Tiếng gọi chiến thắng' của Quang Dũng được sáng tác vào năm nào?",
+            "correct": "1945",
+            "user_ans": "1949",
+            "is_right": false
+          },
+          {
+            "no": 16,
+            "question": "Thơ 'Xuân Diệu' thường sử dụng biện pháp tu từ nào để thể hiện tình cảm?",
+            "correct": "Điệp lại",
+            "user_ans": "Nhân hóa",
+            "is_right": false
+          },
+          {
+            "no": 17,
+            "question": "Tác phẩm 'Thơ về tình yêu' của Chế Lan Viên được sáng tác vào năm nào?",
+            "correct": "1938",
+            "user_ans": "1938",
+            "is_right": true
+          },
+          {
+            "no": 18,
+            "question": "Thơ 'Huy Cận' thường có phong cách ngôn ngữ như thế nào?",
+            "correct": "Tự do",
+            "user_ans": "Làm theo thể thơ truyền thống",
+            "is_right": false
+          },
+          {
+            "no": 19,
+            "question": "Tác phẩm 'Từ ấy' của Tố Hữu được sáng tác vào năm nào?",
+            "correct": "1945",
+            "user_ans": "1947",
+            "is_right": false
+          },
+          {
+            "no": 20,
+            "question": "Thơ 'Quang Dũng' thường sử dụng biện pháp tu từ nào để thể hiện tình cảm?",
+            "correct": "Nhân hóa",
+            "user_ans": "So sánh",
+            "is_right": false
+          }
+        ]
+      },
+      {
+        "id": "TRAN_20260214144957",
+        "date": "2026-02-14 14:49",
+        "subject": "Ngữ Văn",
+        "grade": "Lớp 10 (THPT)",
+        "score": 7,
+        "total": 20,
+        "pct": 35,
+        "time_sec": 24,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Tác phẩm 'Đất rừng phương Nam' của Nguyễn Minh Châu được xuất bản vào năm nào?",
+            "correct": "1985",
+            "user_ans": "1985",
+            "is_right": true
+          },
+          {
+            "no": 2,
+            "question": "Tác giả Nam Cao là người sáng tác ra tác phẩm nào sau đây?",
+            "correct": "Lão Hạc",
+            "user_ans": "Đất rừng phương Nam",
+            "is_right": false
+          },
+          {
+            "no": 3,
+            "question": "Thơ Tố Hữu là một trong những tác giả tiêu biểu của văn học kháng chiến 1945-1954. Ông là người sáng tác ra tác phẩm nào sau đây?",
+            "correct": "Từ ấy",
+            "user_ans": "Lượm",
+            "is_right": false
+          },
+          {
+            "no": 4,
+            "question": "Tác phẩm 'Vợ nhặt' của Kim Lân được xuất bản vào năm nào?",
+            "correct": "1943",
+            "user_ans": "1970",
+            "is_right": false
+          },
+          {
+            "no": 5,
+            "question": "Chủ đề của tác phẩm 'Đất rừng phương Nam' của Nguyễn Minh Châu là gì?",
+            "correct": "Đổi mới",
+            "user_ans": "Tình yêu",
+            "is_right": false
+          },
+          {
+            "no": 6,
+            "question": "Tác giả Nguyễn Khải là người sáng tác ra tác phẩm nào sau đây?",
+            "correct": "Bóng tối và ánh sáng",
+            "user_ans": "Lão Hạc",
+            "is_right": false
+          },
+          {
+            "no": 7,
+            "question": "Tác phẩm 'Tắt đèn' của Ngô Tất Tố được xuất bản vào năm nào?",
+            "correct": "1937",
+            "user_ans": "1940",
+            "is_right": false
+          },
+          {
+            "no": 8,
+            "question": "Thể loại của tác phẩm 'Lão Hạc' của Nam Cao là gì?",
+            "correct": "Truyện ngắn",
+            "user_ans": "Tiểu thuyết",
+            "is_right": false
+          },
+          {
+            "no": 9,
+            "question": "Kết cấu của tác phẩm 'Đất rừng phương Nam' của Nguyễn Minh Châu là gì?",
+            "correct": "Kết cấu tuyến tính",
+            "user_ans": "Kết cấu tuyến tính",
+            "is_right": true
+          },
+          {
+            "no": 10,
+            "question": "Nhân vật chính của tác phẩm 'Lão Hạc' của Nam Cao là ai?",
+            "correct": "Lão Hạc",
+            "user_ans": "Con gái Lão Hạc",
+            "is_right": false
+          },
+          {
+            "no": 11,
+            "question": "Hình tượng của nhân vật Lão Hạc trong tác phẩm 'Lão Hạc' của Nam Cao là gì?",
+            "correct": "Hình tượng của sự tự trọng",
+            "user_ans": "Hình tượng của sự bất công",
+            "is_right": false
+          },
+          {
+            "no": 12,
+            "question": "Tác phẩm 'Tố Hữu' của Chính Hữu được xuất bản vào năm nào?",
+            "correct": "1945",
+            "user_ans": "1945",
+            "is_right": true
+          },
+          {
+            "no": 13,
+            "question": "Biện pháp tu từ được sử dụng trong tác phẩm 'Đất rừng phương Nam' của Nguyễn Minh Châu là gì?",
+            "correct": "Sử dụng hình ảnh",
+            "user_ans": "Sử dụng ẩn dụ",
+            "is_right": false
+          },
+          {
+            "no": 14,
+            "question": "Tác phẩm 'Bóng tối và ánh sáng' của Nguyễn Khải được xuất bản vào năm nào?",
+            "correct": "1985",
+            "user_ans": "1985",
+            "is_right": true
+          },
+          {
+            "no": 15,
+            "question": "Tác giả Vũ Trọng Phụng là người sáng tác ra tác phẩm nào sau đây?",
+            "correct": "Lão Hạc",
+            "user_ans": "Đất rừng phương Nam",
+            "is_right": false
+          },
+          {
+            "no": 16,
+            "question": "Thể loại của tác phẩm 'Tố Hữu' của Chính Hữu là gì?",
+            "correct": "Thơ",
+            "user_ans": "Thơ",
+            "is_right": true
+          },
+          {
+            "no": 17,
+            "question": "Kết cấu của tác phẩm 'Lão Hạc' của Nam Cao là gì?",
+            "correct": "Kết cấu tuyến tính",
+            "user_ans": "Kết cấu phi tuyến tính",
+            "is_right": false
+          },
+          {
+            "no": 18,
+            "question": "Nhân vật chính của tác phẩm 'Tố Hữu' của Chính Hữu là ai?",
+            "correct": "Tố Hữu",
+            "user_ans": "Tố Hữu",
+            "is_right": true
+          },
+          {
+            "no": 19,
+            "question": "Hình tượng của nhân vật Tố Hữu trong tác phẩm 'Tố Hữu' của Chính Hữu là gì?",
+            "correct": "Hình tượng của sự sáng tạo",
+            "user_ans": "Hình tượng của sự sáng tạo",
+            "is_right": true
+          },
+          {
+            "no": 20,
+            "question": "Tác phẩm 'Quang Dũng' của Quang Dũng được xuất bản vào năm nào?",
+            "correct": "1945",
+            "user_ans": "1950",
+            "is_right": false
+          }
+        ]
+      },
+      {
+        "id": "TRAN_20260214150134",
+        "date": "2026-02-14 15:01",
+        "subject": "Toán",
+        "grade": "Lớp 1–2 (Tiểu học)",
+        "score": 20,
+        "total": 20,
+        "pct": 100,
+        "time_sec": 38,
+        "source": "local",
+        "detail": [
+          {
+            "no": 1,
+            "question": "6 ÷ 2 = ?",
+            "correct": "3",
+            "user_ans": "3",
+            "is_right": true
+          },
+          {
+            "no": 2,
+            "question": "Số liền trước 10 là?",
+            "correct": "9",
+            "user_ans": "9",
+            "is_right": true
+          },
+          {
+            "no": 3,
+            "question": "2 × 3 = ?",
+            "correct": "6",
+            "user_ans": "6",
+            "is_right": true
+          },
+          {
+            "no": 4,
+            "question": "Số liền sau 9 là?",
+            "correct": "10",
+            "user_ans": "10",
+            "is_right": true
+          },
+          {
+            "no": 5,
+            "question": "3 + 3 + 3 = ?",
+            "correct": "9",
+            "user_ans": "9",
+            "is_right": true
+          },
+          {
+            "no": 6,
+            "question": "20 – 10 = ?",
+            "correct": "10",
+            "user_ans": "10",
+            "is_right": true
+          },
+          {
+            "no": 7,
+            "question": "10 ÷ 2 = ?",
+            "correct": "5",
+            "user_ans": "5",
+            "is_right": true
+          },
+          {
+            "no": 8,
+            "question": "5 × 2 = ?",
+            "correct": "10",
+            "user_ans": "10",
+            "is_right": true
+          },
+          {
+            "no": 9,
+            "question": "12 – 2 = ?",
+            "correct": "10",
+            "user_ans": "10",
+            "is_right": true
+          },
+          {
+            "no": 10,
+            "question": "Số nào lớn hơn: 7 hay 5?",
+            "correct": "7",
+            "user_ans": "7",
+            "is_right": true
+          },
+          {
+            "no": 11,
+            "question": "Số nào là số chẵn?",
+            "correct": "4",
+            "user_ans": "4",
+            "is_right": true
+          },
+          {
+            "no": 12,
+            "question": "9 – 4 = ?",
+            "correct": "5",
+            "user_ans": "5",
+            "is_right": true
+          },
+          {
+            "no": 13,
+            "question": "5 – 3 = ?",
+            "correct": "2",
+            "user_ans": "2",
+            "is_right": true
+          },
+          {
+            "no": 14,
+            "question": "1 + 1 = ?",
+            "correct": "2",
+            "user_ans": "2",
+            "is_right": true
+          },
+          {
+            "no": 15,
+            "question": "3 + 4 = ?",
+            "correct": "7",
+            "user_ans": "7",
+            "is_right": true
+          },
+          {
+            "no": 16,
+            "question": "8 – 5 = ?",
+            "correct": "3",
+            "user_ans": "3",
+            "is_right": true
+          },
+          {
+            "no": 17,
+            "question": "4 × 2 = ?",
+            "correct": "8",
+            "user_ans": "8",
+            "is_right": true
+          },
+          {
+            "no": 18,
+            "question": "2 + 8 = ?",
+            "correct": "10",
+            "user_ans": "10",
+            "is_right": true
+          },
+          {
+            "no": 19,
+            "question": "1 chục = ? đơn vị",
+            "correct": "10",
+            "user_ans": "10",
+            "is_right": true
+          },
+          {
+            "no": 20,
+            "question": "Hình nào có 3 cạnh?",
+            "correct": "Tam giác",
+            "user_ans": "Tam giác",
+            "is_right": true
+          }
+        ]
+      },
+      {
+        "id": "TRAN_20260214203117",
+        "date": "2026-02-14 20:31",
+        "subject": "Toán",
+        "grade": "Lớp 1–2 (Tiểu học)",
+        "score": 5,
+        "total": 10,
+        "pct": 50,
+        "time_sec": 13,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Kết quả của 9 - 4 là?",
+            "correct": "5",
+            "user_ans": "5",
+            "is_right": true
+          },
+          {
+            "no": 2,
+            "question": "Tổng của 2 và 8 là?",
+            "correct": "10",
+            "user_ans": "10",
+            "is_right": true
+          },
+          {
+            "no": 3,
+            "question": "Kết quả của 3 cộng 4 là?",
+            "correct": "7",
+            "user_ans": "6",
+            "is_right": false
+          },
+          {
+            "no": 4,
+            "question": "Số nào lớn hơn giữa 7 và 5?",
+            "correct": "7",
+            "user_ans": "6",
+            "is_right": false
+          },
+          {
+            "no": 5,
+            "question": "Kết quả của 5 nhân 2 là?",
+            "correct": "10",
+            "user_ans": "11",
+            "is_right": false
+          },
+          {
+            "no": 6,
+            "question": "Số chẵn trong các lựa chọn là?",
+            "correct": "4",
+            "user_ans": "1",
+            "is_right": false
+          },
+          {
+            "no": 7,
+            "question": "Tích của 4 và 2 là?",
+            "correct": "8",
+            "user_ans": "8",
+            "is_right": true
+          },
+          {
+            "no": 8,
+            "question": "Kết quả của 5 trừ 3 là?",
+            "correct": "2",
+            "user_ans": "3",
+            "is_right": false
+          },
+          {
+            "no": 9,
+            "question": "Số liền kề sau 9 là?",
+            "correct": "10",
+            "user_ans": "10",
+            "is_right": true
+          },
+          {
+            "no": 10,
+            "question": "Tổng của 3 cộng 3 cộng 3 là?",
+            "correct": "9",
+            "user_ans": "9",
+            "is_right": true
+          }
+        ]
+      },
+      {
+        "id": "TRAN_20260214203223",
+        "date": "2026-02-14 20:32",
+        "subject": "Toán",
+        "grade": "Đại học / Nâng cao",
+        "score": 4,
+        "total": 10,
+        "pct": 40,
+        "time_sec": 11,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Nghiệm của phương trình x²+1=0 là gì?",
+            "correct": "±i",
+            "user_ans": "±i",
+            "is_right": true
+          },
+          {
+            "no": 2,
+            "question": "Số chiều của không gian vectơ ℝⁿ là bao nhiêu?",
+            "correct": "n",
+            "user_ans": "n",
+            "is_right": true
+          },
+          {
+            "no": 3,
+            "question": "Số phức liên hợp của z=a+bi được tính như thế nào?",
+            "correct": "a–bi",
+            "user_ans": "bi–a",
+            "is_right": false
+          },
+          {
+            "no": 4,
+            "question": "Determinant của ma trận [[1,2],[3,4]] là gì?",
+            "correct": "-2",
+            "user_ans": "10",
+            "is_right": false
+          },
+          {
+            "no": 5,
+            "question": "Kết quả của tích phân ∫₀^π sin(x) dx là bao nhiêu?",
+            "correct": "2",
+            "user_ans": "2",
+            "is_right": true
+          },
+          {
+            "no": 6,
+            "question": "Chuỗi Taylor của hàm sin(x) tại x=0 được biểu diễn như thế nào?",
+            "correct": "x–x³/6+x⁵/120–...",
+            "user_ans": "1–x²/2+x⁴/24–...",
+            "is_right": false
+          },
+          {
+            "no": 7,
+            "question": "Biến đổi Laplace của hàm eᵃᵗ là gì?",
+            "correct": "1/(s–a)",
+            "user_ans": "a/s",
+            "is_right": false
+          },
+          {
+            "no": 8,
+            "question": "Rank của ma trận [[1,2],[2,4]] là bao nhiêu?",
+            "correct": "1",
+            "user_ans": "0",
+            "is_right": false
+          },
+          {
+            "no": 9,
+            "question": "Chuỗi Σ 1/n² có tính hội tụ không?",
+            "correct": "Hội tụ về π²/6",
+            "user_ans": "Hội tụ về π²/6",
+            "is_right": true
+          },
+          {
+            "no": 10,
+            "question": "Phép nhân ma trận có tính chất giao hoán hay không?",
+            "correct": "Không luôn có",
+            "user_ans": "Chỉ với ma trận vuông",
+            "is_right": false
+          }
+        ]
+      },
+      {
+        "id": "TRAN_20260214211932",
+        "date": "2026-02-14 21:19",
+        "subject": "Toán",
+        "grade": "Lớp 9 (THCS)",
+        "score": 4,
+        "total": 10,
+        "pct": 40,
+        "time_sec": 15,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Tính giá trị của 2³ × 2²",
+            "correct": "2⁵",
+            "user_ans": "2⁵",
+            "is_right": true
+          },
+          {
+            "no": 2,
+            "question": "Tìm giá trị của hàm số f(x) = x² - 1 tại x = 3",
+            "correct": "8",
+            "user_ans": "10",
+            "is_right": false
+          },
+          {
+            "no": 3,
+            "question": "Hàm số y = 2x + 3 là hàm đồng biến khi nào?",
+            "correct": "Với mọi x",
+            "user_ans": "x > 0",
+            "is_right": false
+          },
+          {
+            "no": 4,
+            "question": "Tìm nghiệm của bất phương trình 2x - 4 > 0",
+            "correct": "x > 2",
+            "user_ans": "x < 2",
+            "is_right": false
+          },
+          {
+            "no": 5,
+            "question": "Góc nội tiếp chắn nửa đường tròn bằng bao nhiêu?",
+            "correct": "90°",
+            "user_ans": "90°",
+            "is_right": true
+          },
+          {
+            "no": 6,
+            "question": "Tìm số hạng thứ 5 của cấp số cộng với a₁=2 và d=3",
+            "correct": "14",
+            "user_ans": "14",
+            "is_right": true
+          },
+          {
+            "no": 7,
+            "question": "Mỗi góc đáy của một tam giác cân có góc ở đỉnh 40° là bao nhiêu?",
+            "correct": "70°",
+            "user_ans": "60°",
+            "is_right": false
+          },
+          {
+            "no": 8,
+            "question": "Tính giá trị của √144",
+            "correct": "12",
+            "user_ans": "12",
+            "is_right": true
+          },
+          {
+            "no": 9,
+            "question": "Tính chu vi của hình vuông có cạnh a=6",
+            "correct": "24",
+            "user_ans": "36",
+            "is_right": false
+          },
+          {
+            "no": 10,
+            "question": "Tổng các góc trong một tam giác là bao nhiêu?",
+            "correct": "180°",
+            "user_ans": "360°",
+            "is_right": false
+          }
+        ]
+      },
+      {
+        "id": "TRAN_20260214213138",
+        "date": "2026-02-14 21:31",
+        "subject": "Toán",
+        "grade": "Lớp 9 (THCS)",
+        "score": 4,
+        "total": 10,
+        "pct": 40,
+        "time_sec": 24,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Nếu hàm số f(x) = x² - 1 thì giá trị của f(3) là?",
+            "correct": "8",
+            "user_ans": "8",
+            "is_right": true
+          },
+          {
+            "no": 2,
+            "question": "Phương trình của đường thẳng đi qua hai điểm (0,2) và (1,4) là?",
+            "correct": "y=2x+2",
+            "user_ans": "y=2x",
+            "is_right": false
+          },
+          {
+            "no": 3,
+            "question": "Trong một tam giác cân, góc đỉnh là 40°. Hãy tìm giá trị của mỗi góc đáy?",
+            "correct": "70°",
+            "user_ans": "70°",
+            "is_right": true
+          },
+          {
+            "no": 4,
+            "question": "Điểm đỉnh của đồ thị hàm số y = x² là?",
+            "correct": "(0,0)",
+            "user_ans": "(1,0)",
+            "is_right": false
+          },
+          {
+            "no": 5,
+            "question": "Kết quả của phép tính 2³ × 2² là?",
+            "correct": "2⁵",
+            "user_ans": "2⁷",
+            "is_right": false
+          },
+          {
+            "no": 6,
+            "question": "Hệ phương trình x+y=5 và x-y=1 có nghiệm là?",
+            "correct": "x=3,y=2",
+            "user_ans": "x=4,y=1",
+            "is_right": false
+          },
+          {
+            "no": 7,
+            "question": "Biểu thức (a+b)² được mở rộng thành?",
+            "correct": "a²+2ab+b²",
+            "user_ans": "a²+ab+b²",
+            "is_right": false
+          },
+          {
+            "no": 8,
+            "question": "Tổng của dãy số 1+2+3+...+10 là?",
+            "correct": "55",
+            "user_ans": "45",
+            "is_right": false
+          },
+          {
+            "no": 9,
+            "question": "Giá trị của log₁₀(1000) là?",
+            "correct": "3",
+            "user_ans": "3",
+            "is_right": true
+          },
+          {
+            "no": 10,
+            "question": "Trung điểm của đoạn thẳng AB với A(2,4) và B(6,8) là điểm?",
+            "correct": "(4,6)",
+            "user_ans": "(4,6)",
+            "is_right": true
+          }
+        ]
+      }
+    ]
+  },
+  "Cà Chua": {
+    "created_at": "2026-02-14 21:12",
+    "exams": [
+      {
+        "id": "CÀ C_20260214214433",
+        "date": "2026-02-14 21:44",
+        "subject": "Toán",
+        "grade": "Lớp 9 (THCS)",
+        "score": 2,
+        "total": 2,
+        "pct": 100,
+        "time_sec": 10,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Câu hỏi này thế nào",
+            "correct": "3",
+            "user_ans": "3",
+            "is_right": true
+          },
+          {
+            "no": 2,
+            "question": "Câu hỏi này ra sao",
+            "correct": "3",
+            "user_ans": "3",
+            "is_right": true
+          }
+        ]
+      },
+      {
+        "id": "CÀ C_20260215104628",
+        "date": "2026-02-15 10:46",
+        "subject": "Toán",
+        "grade": "Lớp 11 (THPT)",
+        "score": 4,
+        "total": 10,
+        "pct": 40,
+        "time_sec": 35,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Tìm giá trị giới hạn của $L = \\lim \\frac{3n^2 + n}{n^2 - 2}$.",
+            "correct": "L = 3",
+            "user_ans": "L = -1/2",
+            "is_right": false
+          },
+          {
+            "no": 2,
+            "question": "Tìm số hạng thứ 10 của dãy số $(u_n)$ với công thức $u_n = 2n - 1$.",
+            "correct": "19",
+            "user_ans": "19",
+            "is_right": true
+          },
+          {
+            "no": 3,
+            "question": "Xác định hàm số nào sau đây là hàm số chẵn.",
+            "correct": "y = \\cos x",
+            "user_ans": "y = \\cos x",
+            "is_right": true
+          },
+          {
+            "no": 4,
+            "question": "Chuyển đổi số đo góc $\\alpha = 150^\\circ$ sang đơn vị radian.",
+            "correct": "5π/6",
+            "user_ans": "5π/6",
+            "is_right": true
+          },
+          {
+            "no": 5,
+            "question": "Tính đạo hàm của hàm số $y = \\sqrt{x}$ tại điểm $x = 4$.",
+            "correct": "1/4",
+            "user_ans": "4",
+            "is_right": false
+          },
+          {
+            "no": 6,
+            "question": "Tìm đạo hàm của hàm số $y = \\tan x$.",
+            "correct": "1/\\cos^2 x",
+            "user_ans": "1/\\cos^2 x",
+            "is_right": true
+          },
+          {
+            "no": 7,
+            "question": "Tính giá trị giới hạn của $\\lim_{x \\to 2} (x^2 - 4)$.",
+            "correct": "0",
+            "user_ans": "2",
+            "is_right": false
+          },
+          {
+            "no": 8,
+            "question": "Tìm giá trị của $\\lim_{x \\to 0} \\frac{\\sin x}{x}$.",
+            "correct": "1",
+            "user_ans": "+\\infty",
+            "is_right": false
+          },
+          {
+            "no": 9,
+            "question": "Tính đạo hàm của hàm số $y = x^2 - 3x + 2$.",
+            "correct": "2x - 3",
+            "user_ans": "x - 3",
+            "is_right": false
+          },
+          {
+            "no": 10,
+            "question": "Trong một cấp số cộng, nếu biết $u_1$ và $u_3$, công thức tính công sai $d$ là:",
+            "correct": "d = (u_3 - u_1)/2",
+            "user_ans": "d = \\sqrt{u_1 u_3}",
+            "is_right": false
+          }
+        ]
+      },
+      {
+        "id": "CÀ C_20260215110200",
+        "date": "2026-02-15 11:02",
+        "subject": "Toán",
+        "grade": "Lớp 11 (THPT)",
+        "score": 1,
+        "total": 10,
+        "pct": 10,
+        "time_sec": 8,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Đạo hàm của hàm số y = ln(x) là gì?",
+            "correct": "1/x",
+            "user_ans": "1/x^2",
+            "is_right": false
+          },
+          {
+            "no": 2,
+            "question": "Tìm đạo hàm của hàm số y = 1/x?",
+            "correct": "-1/x^2",
+            "user_ans": "-1/x",
+            "is_right": false
+          },
+          {
+            "no": 3,
+            "question": "Hệ số góc của tiếp tuyến tại điểm M(x0; f(x0)) là gì nếu hàm số f(x) có đạo hàm tại x0?",
+            "correct": "f'(x0)",
+            "user_ans": "1/f'(x0)",
+            "is_right": false
+          },
+          {
+            "no": 4,
+            "question": "Tìm giá trị của lim x→1+ 1/(x-1)?",
+            "correct": "+∞",
+            "user_ans": "-∞",
+            "is_right": false
+          },
+          {
+            "no": 5,
+            "question": "Đổi số đo góc α = 150° sang đơn vị radian?",
+            "correct": "5π/6",
+            "user_ans": "2π/3",
+            "is_right": false
+          },
+          {
+            "no": 6,
+            "question": "Cho sin(α) = 3/5 với π/2 < α < π. Tính cos(α)?",
+            "correct": "-4/5",
+            "user_ans": "16/25",
+            "is_right": false
+          },
+          {
+            "no": 7,
+            "question": "Công thức tính số hạng tổng quát của cấp số cộng là gì?",
+            "correct": "u_n = u_1 + (n-1)d",
+            "user_ans": "u_n = u_1 + nd",
+            "is_right": false
+          },
+          {
+            "no": 8,
+            "question": "Góc giữa hai đường thẳng song song bằng bao nhiêu độ?",
+            "correct": "0°",
+            "user_ans": "0°",
+            "is_right": true
+          },
+          {
+            "no": 9,
+            "question": "Tìm đạo hàm của hàm số y = 5x^4?",
+            "correct": "20x^3",
+            "user_ans": "5x^3",
+            "is_right": false
+          },
+          {
+            "no": 10,
+            "question": "Tính đạo hàm của y = √x tại x = 4?",
+            "correct": "1/4",
+            "user_ans": "4",
+            "is_right": false
+          }
+        ]
+      }
+    ]
+  },
+  "Trần Lê Tuấn Anh": {
+    "created_at": "2026-02-15 17:16",
+    "exams": [
+      {
+        "id": "TRẦN_20260215171732",
+        "date": "2026-02-15 17:17",
+        "subject": "Toán",
+        "grade": "Lớp 11 (THPT)",
+        "score": 2,
+        "total": 10,
+        "pct": 20,
+        "time_sec": 13,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Tìm giá trị giới hạn của biểu thức $L = \\lim \\frac{3n^2 + n}{n^2 - 2}$.",
+            "correct": "L = 3",
+            "user_ans": "L = 3",
+            "is_right": true
+          },
+          {
+            "no": 2,
+            "question": "Khi $n$ tiến đến dương vô cùng, giới hạn của dãy số $u_n = 1/n$ là:",
+            "correct": "0",
+            "user_ans": "1",
+            "is_right": false
+          },
+          {
+            "no": 3,
+            "question": "Công thức số hạng tổng quát của một cấp số nhân là:",
+            "correct": "u_n = u_1 \\cdot q^{n-1}",
+            "user_ans": "u_n = u_1 + (n-1)q",
+            "is_right": false
+          },
+          {
+            "no": 4,
+            "question": "Nghiệm của phương trình $\\tan x = 1$ là:",
+            "correct": "x = π/4 + kπ",
+            "user_ans": "x = kπ",
+            "is_right": false
+          },
+          {
+            "no": 5,
+            "question": "Cho dãy số $(u_n)$ với $u_n = 2n - 1$, hãy tìm số hạng $u_{10}$.",
+            "correct": "19",
+            "user_ans": "20",
+            "is_right": false
+          },
+          {
+            "no": 6,
+            "question": "Hàm số $y = x^2$ đạt giá trị nhỏ nhất tại điểm nào?",
+            "correct": "x = 0",
+            "user_ans": "x = 1",
+            "is_right": false
+          },
+          {
+            "no": 7,
+            "question": "Đạo hàm của hàm số $y = e^x$ là:",
+            "correct": "e^x",
+            "user_ans": "e^x \\ln e",
+            "is_right": false
+          },
+          {
+            "no": 8,
+            "question": "Hàm số $y = \\frac{x+1}{x-1}$ không xác định tại điểm nào?",
+            "correct": "x = 1",
+            "user_ans": "x = -1",
+            "is_right": false
+          },
+          {
+            "no": 9,
+            "question": "Công thức tính công sai $d$ trong cấp số cộng khi biết $u_1$ và $u_3$ là:",
+            "correct": "d = (u_3 - u_1)/2",
+            "user_ans": "d = u_3 - u_1",
+            "is_right": false
+          },
+          {
+            "no": 10,
+            "question": "Tìm đạo hàm của hàm số $y = x^2 - 3x + 2$.",
+            "correct": "2x - 3",
+            "user_ans": "2x - 3",
+            "is_right": true
+          }
+        ]
+      },
+      {
+        "id": "TRẦN_20260215212350",
+        "date": "2026-02-15 21:23",
+        "subject": "Toán",
+        "grade": "Lớp 9 (THCS)",
+        "score": 1,
+        "total": 1,
+        "pct": 100,
+        "time_sec": 2,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Câu hỏi này là gì?",
+            "correct": "1",
+            "user_ans": "1",
+            "is_right": true
+          }
+        ]
+      }
+    ]
+  },
+  "Nguyễn Thị Thanh Tâm": {
+    "created_at": "2026-02-15 21:59",
+    "exams": [
+      {
+        "id": "NGUY_20260215220312",
+        "date": "2026-02-15 22:03",
+        "subject": "Toán",
+        "grade": "Lớp 11 (THPT)",
+        "score": 3,
+        "total": 10,
+        "pct": 30,
+        "time_sec": 134,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Tìm đạo hàm của hàm số $y = \\sqrt{x}$ tại điểm $x = 4$.",
+            "correct": "1/4",
+            "user_ans": "4",
+            "is_right": false
+          },
+          {
+            "no": 2,
+            "question": "Xác định hàm số chẵn trong các lựa chọn sau.",
+            "correct": "y = \\cos x",
+            "user_ans": "y = \\cos x",
+            "is_right": true
+          },
+          {
+            "no": 3,
+            "question": "Tìm số hạng thứ 10 của dãy số $(u_n)$ với công thức $u_n = 2n - 1$.",
+            "correct": "19",
+            "user_ans": "19",
+            "is_right": true
+          },
+          {
+            "no": 4,
+            "question": "Nghiệm của phương trình $\\tan x = 1$ là:",
+            "correct": "x = π/4 + kπ",
+            "user_ans": "x = π/4 + k2π",
+            "is_right": false
+          },
+          {
+            "no": 5,
+            "question": "Công thức tính số hạng tổng quát của cấp số cộng là gì?",
+            "correct": "u_n = u_1 + (n-1)d",
+            "user_ans": "u_n = u_1 \\cdot d^{n-1}",
+            "is_right": false
+          },
+          {
+            "no": 6,
+            "question": "Đường thẳng nào trong hình chóp S.ABCD có đáy hình vuông là vuông góc với mặt đáy?",
+            "correct": "Nếu SA vuông góc đáy thì là SA",
+            "user_ans": "Nếu SA vuông góc đáy thì là SA",
+            "is_right": true
+          },
+          {
+            "no": 7,
+            "question": "Tìm đạo hàm của hàm số $y = e^x$.",
+            "correct": "e^x",
+            "user_ans": "x \\cdot e^{x-1}",
+            "is_right": false
+          },
+          {
+            "no": 8,
+            "question": "Công thức tính công sai $d$ trong cấp số cộng khi biết $u_1$ và $u_3$ là:",
+            "correct": "d = (u_3 - u_1)/2",
+            "user_ans": "d = u_3 + u_1",
+            "is_right": false
+          },
+          {
+            "no": 9,
+            "question": "Tìm đạo hàm của hàm số $y = x \\cdot \\sin x$.",
+            "correct": "\\sin x + x\\cos x",
+            "user_ans": "\\cos x",
+            "is_right": false
+          },
+          {
+            "no": 10,
+            "question": "Đổi số đo góc $\\alpha = 150^\\circ$ sang đơn vị radian.",
+            "correct": "5π/6",
+            "user_ans": "2π/3",
+            "is_right": false
+          }
+        ]
+      },
+      {
+        "id": "NGUY_20260215221829",
+        "date": "2026-02-15 22:18",
+        "subject": "Toán",
+        "grade": "Lớp 11 (THPT)",
+        "score": 2,
+        "total": 10,
+        "pct": 20,
+        "time_sec": 65,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Đổi số đo của góc $\\alpha = 150^\\circ$ sang đơn vị radian.",
+            "correct": "5π/6",
+            "user_ans": "3π/4",
+            "is_right": false
+          },
+          {
+            "no": 2,
+            "question": "Trong các dãy số sau, dãy số nào là cấp số cộng?",
+            "correct": "1, 3, 5, 7",
+            "user_ans": "1, 1, 2, 3",
+            "is_right": false
+          },
+          {
+            "no": 3,
+            "question": "Công thức tính số hạng tổng quát của cấp số cộng là:",
+            "correct": "u_n = u_1 + (n-1)d",
+            "user_ans": "u_n = u_1 - (n-1)d",
+            "is_right": false
+          },
+          {
+            "no": 4,
+            "question": "Khoảng cách giữa hai đường thẳng song song là:",
+            "correct": "Khoảng cách từ một điểm bất kỳ trên đường này tới đường kia",
+            "user_ans": "Khoảng cách từ một điểm bất kỳ trên đường này tới đường kia",
+            "is_right": true
+          },
+          {
+            "no": 5,
+            "question": "Tính đạo hàm của $y = \\sqrt{x}$ tại $x = 4$.",
+            "correct": "1/4",
+            "user_ans": "1/2",
+            "is_right": false
+          },
+          {
+            "no": 6,
+            "question": "Nghiệm của phương trình $\\sin x = 0$ là:",
+            "correct": "x = kπ",
+            "user_ans": "x = π + k2π",
+            "is_right": false
+          },
+          {
+            "no": 7,
+            "question": "Cho cấp số nhân có $u_1 = -2$ và công bội $q = -3$. Số hạng thứ hai là:",
+            "correct": "6",
+            "user_ans": "-6",
+            "is_right": false
+          },
+          {
+            "no": 8,
+            "question": "Hàm số $y = x^2$ đạt giá trị nhỏ nhất tại:",
+            "correct": "x = 0",
+            "user_ans": "x = 0",
+            "is_right": true
+          },
+          {
+            "no": 9,
+            "question": "$\\lim_{x \\to +\\infty} \\frac{1-x^2}{x^2+1}$ bằng:",
+            "correct": "-1",
+            "user_ans": "1",
+            "is_right": false
+          },
+          {
+            "no": 10,
+            "question": "$\\lim_{x \\to 0} \\frac{\\sin x}{x}$ bằng:",
+            "correct": "1",
+            "user_ans": "+\\infty",
+            "is_right": false
+          }
+        ]
+      },
+      {
+        "id": "NGUY_20260215222153",
+        "date": "2026-02-15 22:21",
+        "subject": "Toán",
+        "grade": "Lớp 11 (THPT)",
+        "score": 0,
+        "total": 10,
+        "pct": 0,
+        "time_sec": 21,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Góc giữa hai mặt phẳng vuông góc với nhau bằng:",
+            "correct": "90°",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 2,
+            "question": "Đạo hàm của hàm số $y = 1/x$ là:",
+            "correct": "-1/x^2",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 3,
+            "question": "Tìm công sai $d$ của cấp số cộng $(u_n)$ biết $u_1 = 3$ và $u_2 = 10$.",
+            "correct": "d = 7",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 4,
+            "question": "Số hạng tổng quát của cấp số nhân là:",
+            "correct": "u_n = u_1 \\cdot q^{n-1}",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 5,
+            "question": "Tính đạo hàm của $y = \\tan x$.",
+            "correct": "1/\\cos^2 x",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 6,
+            "question": "Tính đạo hàm của hàm số $y = x^2 - 3x + 2$.",
+            "correct": "2x - 3",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 7,
+            "question": "Cho tứ diện ABCD. Có bao nhiêu cặp đường thẳng chéo nhau?",
+            "correct": "3",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 8,
+            "question": "Cho dãy số $(u_n)$ với $u_n = 2n - 1$. Số hạng $u_{10}$ là:",
+            "correct": "19",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 9,
+            "question": "Nghiệm của phương trình $\\sin x = 0$ là:",
+            "correct": "x = kπ",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 10,
+            "question": "Hàm số $y = x^2$ đạt giá trị nhỏ nhất tại:",
+            "correct": "x = 0",
+            "user_ans": "—",
+            "is_right": false
+          }
+        ]
+      },
+      {
+        "id": "NGUY_20260216024643",
+        "date": "2026-02-16 02:46",
+        "subject": "Toán",
+        "grade": "Lớp 11 (THPT)",
+        "score": 2,
+        "total": 10,
+        "pct": 20,
+        "time_sec": 22,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Tìm tập giá trị T của hàm số $y = 3\\sin(2x) - 1$.",
+            "correct": "T = [-4; 2]",
+            "user_ans": "T = [-2; 4]",
+            "is_right": false
+          },
+          {
+            "no": 2,
+            "question": "Một đường thẳng d vuông góc với mặt phẳng (P) thì d vuông góc với:",
+            "correct": "Mọi đường thẳng trong (P)",
+            "user_ans": "Không vuông góc với đường nào",
+            "is_right": false
+          },
+          {
+            "no": 3,
+            "question": "Tính đạo hàm của hàm số $y = x^2 - 3x + 2$.",
+            "correct": "2x - 3",
+            "user_ans": "2x + 2",
+            "is_right": false
+          },
+          {
+            "no": 4,
+            "question": "Hình chóp tam giác có bao nhiêu mặt?",
+            "correct": "4",
+            "user_ans": "4",
+            "is_right": true
+          },
+          {
+            "no": 5,
+            "question": "Chu kỳ tuần hoàn của hàm số $y = \\sin x$ là:",
+            "correct": "2π",
+            "user_ans": "π",
+            "is_right": false
+          },
+          {
+            "no": 6,
+            "question": "Tính đạo hàm của $y = \\tan x$.",
+            "correct": "1/\\cos^2 x",
+            "user_ans": "1 + \\sin^2 x",
+            "is_right": false
+          },
+          {
+            "no": 7,
+            "question": "Góc giữa hai mặt phẳng vuông góc với nhau bằng:",
+            "correct": "90°",
+            "user_ans": "90°",
+            "is_right": true
+          },
+          {
+            "no": 8,
+            "question": "Số cách chọn 2 học sinh từ 10 học sinh là:",
+            "correct": "C(10,2)",
+            "user_ans": "A(10,2)",
+            "is_right": false
+          },
+          {
+            "no": 9,
+            "question": "Giải phương trình $\\cos x = \\cos(\\pi/3)$.",
+            "correct": "x = ±π/3 + k2π",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 10,
+            "question": "Trong các mệnh đề sau, mệnh đề nào sai?",
+            "correct": "Hình lăng trụ có tất cả các cạnh bằng nhau",
+            "user_ans": "—",
+            "is_right": false
+          }
+        ]
+      },
+      {
+        "id": "NGUY_20260216093204",
+        "date": "2026-02-16 09:32",
+        "subject": "Toán",
+        "grade": "Lớp 11 (THPT)",
+        "score": 2,
+        "total": 10,
+        "pct": 20,
+        "time_sec": 35,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Cho dãy số $(u_n)$ với $u_n = 2n - 1$. Số hạng $u_{10}$ là:",
+            "correct": "19",
+            "user_ans": "19",
+            "is_right": true
+          },
+          {
+            "no": 2,
+            "question": "Hàm số $y = x^2$ đạt giá trị nhỏ nhất tại:",
+            "correct": "x = 0",
+            "user_ans": "x = 1",
+            "is_right": false
+          },
+          {
+            "no": 3,
+            "question": "Hàm số $y = \\frac{x+1}{x-1}$ gián đoạn tại điểm nào?",
+            "correct": "x = 1",
+            "user_ans": "x = -1",
+            "is_right": false
+          },
+          {
+            "no": 4,
+            "question": "Phép chiếu song song biến hai đường thẳng song song thành:",
+            "correct": "Hai đường thẳng song song hoặc trùng nhau",
+            "user_ans": "Hai đường thẳng chéo nhau",
+            "is_right": false
+          },
+          {
+            "no": 5,
+            "question": "Đạo hàm của hàm số $y = \\ln x$ là:",
+            "correct": "1/x",
+            "user_ans": "e^x",
+            "is_right": false
+          },
+          {
+            "no": 6,
+            "question": "Tính $\\lim (\\sqrt{n^2+1} - n)$.",
+            "correct": "0",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 7,
+            "question": "Trong không gian, hai đường thẳng không có điểm chung và nằm trên cùng một mặt phẳng gọi là:",
+            "correct": "Song song",
+            "user_ans": "Song song",
+            "is_right": true
+          },
+          {
+            "no": 8,
+            "question": "$\\lim_{x \\to 0} \\frac{\\sin x}{x}$ bằng:",
+            "correct": "1",
+            "user_ans": "+\\infty",
+            "is_right": false
+          },
+          {
+            "no": 9,
+            "question": "Trong không gian, hai đường thẳng chéo nhau khi:",
+            "correct": "Chúng không có điểm chung và không đồng phẳng",
+            "user_ans": "Chúng không có điểm chung và đồng phẳng",
+            "is_right": false
+          },
+          {
+            "no": 10,
+            "question": "Nghiệm của phương trình $\\sin x = 0$ là:",
+            "correct": "x = kπ",
+            "user_ans": "x = π + k2π",
+            "is_right": false
+          }
+        ]
+      },
+      {
+        "id": "NGUY_20260216110711",
+        "date": "2026-02-16 11:07",
+        "subject": "Toán",
+        "grade": "Lớp 11 (THPT)",
+        "score": 1,
+        "total": 40,
+        "pct": 2,
+        "time_sec": 116,
+        "source": "local",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Đạo hàm của hàm số $y = 5x^4$ là:",
+            "correct": "20x^3",
+            "user_ans": "20x^3",
+            "is_right": true
+          },
+          {
+            "no": 2,
+            "question": "Khoảng cách giữa hai đường thẳng song song là:",
+            "correct": "Khoảng cách từ một điểm bất kỳ trên đường này tới đường kia",
+            "user_ans": "Bằng 0",
+            "is_right": false
+          },
+          {
+            "no": 3,
+            "question": "Hình chóp tam giác có bao nhiêu mặt?",
+            "correct": "4",
+            "user_ans": "3",
+            "is_right": false
+          },
+          {
+            "no": 4,
+            "question": "Trong một cấp số cộng, nếu biết $u_1$ và $u_3$, công sai $d$ được tính bởi:",
+            "correct": "d = (u_3 - u_1)/2",
+            "user_ans": "d = u_3 - u_1",
+            "is_right": false
+          },
+          {
+            "no": 5,
+            "question": "Cho cấp số nhân có $u_1 = -2$ và công bội $q = -3$. Số hạng thứ hai là:",
+            "correct": "6",
+            "user_ans": "-5",
+            "is_right": false
+          },
+          {
+            "no": 6,
+            "question": "Trong các mệnh đề sau, mệnh đề nào sai?",
+            "correct": "Hình lăng trụ có tất cả các cạnh bằng nhau",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 7,
+            "question": "Hàm số $y = \\frac{x+1}{x-1}$ gián đoạn tại điểm nào?",
+            "correct": "x = 1",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 8,
+            "question": "Cho tứ diện ABCD. Có bao nhiêu cặp đường thẳng chéo nhau?",
+            "correct": "3",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 9,
+            "question": "Đạo hàm của hàm số $y = 1/x$ là:",
+            "correct": "-1/x^2",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 10,
+            "question": "Giá trị của $\\lim_{x \\to 2} (x^2 - 4)$ là:",
+            "correct": "0",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 11,
+            "question": "Trong không gian, hai đường thẳng chéo nhau khi:",
+            "correct": "Chúng không có điểm chung và không đồng phẳng",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 12,
+            "question": "Đạo hàm của hàm số $y = x \\cdot \\sin x$ là:",
+            "correct": "\\sin x + x\\cos x",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 13,
+            "question": "Cho hàm số $f(x)$ có đạo hàm tại $x_0$. Hệ số góc của tiếp tuyến tại điểm $M(x_0; f(x_0))$ là:",
+            "correct": "f'(x_0)",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 14,
+            "question": "Tính $L = \\lim \\frac{3n^2 + n}{n^2 - 2}$.",
+            "correct": "L = 3",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 15,
+            "question": "Hàm số $y = \\sin x$ đồng biến trên khoảng nào?",
+            "correct": "(-π/2; π/2)",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 16,
+            "question": "Một mặt phẳng hoàn toàn được xác định khi biết:",
+            "correct": "Ba điểm không thẳng hàng",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 17,
+            "question": "Trong các dãy số sau, dãy số nào là cấp số cộng?",
+            "correct": "1, 3, 5, 7",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 18,
+            "question": "Đạo hàm của hàm số $y = \\cos x$ là:",
+            "correct": "-\\sin x",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 19,
+            "question": "$\\lim_{x \\to 0} \\frac{\\sin x}{x}$ bằng:",
+            "correct": "1",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 20,
+            "question": "Tìm tập giá trị T của hàm số $y = 3\\sin(2x) - 1$.",
+            "correct": "T = [-4; 2]",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 21,
+            "question": "Giá trị của $\\lim_{x \\to 1^+} \\frac{1}{x-1}$ là:",
+            "correct": "+\\infty",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 22,
+            "question": "Đạo hàm của $y = e^x$ là:",
+            "correct": "e^x",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 23,
+            "question": "Cho hình chóp S.ABCD có đáy là hình vuông. Đường thẳng nào vuông góc với mặt đáy?",
+            "correct": "Nếu SA vuông góc đáy thì là SA",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 24,
+            "question": "Tính đạo hàm của hàm số $y = x^2 - 3x + 2$.",
+            "correct": "2x - 3",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 25,
+            "question": "Tính $\\lim (\\sqrt{n^2+1} - n)$.",
+            "correct": "0",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 26,
+            "question": "Tìm công sai $d$ của cấp số cộng $(u_n)$ biết $u_1 = 3$ và $u_2 = 10$.",
+            "correct": "d = 7",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 27,
+            "question": "Vi phân của hàm số $y = f(x)$ là:",
+            "correct": "dy = f'(x)dx",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 28,
+            "question": "Cho $\\sin \\alpha = 3/5$ với $\\pi/2 < \\alpha < \\pi$. Tính $\\cos \\alpha$.",
+            "correct": "-4/5",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 29,
+            "question": "Số cách chọn 2 học sinh từ 10 học sinh là:",
+            "correct": "C(10,2)",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 30,
+            "question": "Tính đạo hàm của $y = \\tan x$.",
+            "correct": "1/\\cos^2 x",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 31,
+            "question": "Phép chiếu song song biến hai đường thẳng song song thành:",
+            "correct": "Hai đường thẳng song song hoặc trùng nhau",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 32,
+            "question": "Công thức tính số hạng tổng quát của cấp số cộng là:",
+            "correct": "u_n = u_1 + (n-1)d",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 33,
+            "question": "Tính đạo hàm của $y = \\sqrt{x}$ tại $x = 4$.",
+            "correct": "1/4",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 34,
+            "question": "$\\lim_{x \\to +\\infty} \\frac{1-x^2}{x^2+1}$ bằng:",
+            "correct": "-1",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 35,
+            "question": "Một đường thẳng d vuông góc với mặt phẳng (P) thì d vuông góc với:",
+            "correct": "Mọi đường thẳng trong (P)",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 36,
+            "question": "Nghiệm của phương trình $\\sin x = 0$ là:",
+            "correct": "x = kπ",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 37,
+            "question": "Đổi số đo của góc $\\alpha = 150^\\circ$ sang đơn vị radian.",
+            "correct": "5π/6",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 38,
+            "question": "Cho dãy số $(u_n)$ với $u_n = 2n - 1$. Số hạng $u_{10}$ là:",
+            "correct": "19",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 39,
+            "question": "Hàm số nào sau đây là hàm số chẵn?",
+            "correct": "y = \\cos x",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 40,
+            "question": "Chu kỳ tuần hoàn của hàm số $y = \\sin x$ là:",
+            "correct": "2π",
+            "user_ans": "—",
+            "is_right": false
+          }
+        ]
+      },
+      {
+        "id": "NGUY_20260216215053",
+        "date": "2026-02-16 21:50",
+        "subject": "Toán",
+        "grade": "Đại học / Nâng cao",
+        "score": 3,
+        "total": 16,
+        "pct": 19,
+        "time_sec": 24,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Nếu f liên tục trên [a,b] thì?",
+            "correct": "A. Có nguyên hàm",
+            "user_ans": "B. Không khả tích",
+            "is_right": false
+          },
+          {
+            "no": 2,
+            "question": "det(cA)=? (A cấp n)",
+            "correct": "B. c^n det(A)",
+            "user_ans": "C. det(A)/c",
+            "is_right": false
+          },
+          {
+            "no": 3,
+            "question": "∫ sinh x dx bằng?",
+            "correct": "A. cosh x + C",
+            "user_ans": "B. sinh x",
+            "is_right": false
+          },
+          {
+            "no": 4,
+            "question": "Nếu A^T=-A thì A gọi là?",
+            "correct": "B. Phản xứng",
+            "user_ans": "C. Trực giao",
+            "is_right": false
+          },
+          {
+            "no": 5,
+            "question": "Đạo hàm của arccot x là?",
+            "correct": "A. -1/(1+x^2)",
+            "user_ans": "B. 1/(1+x^2)",
+            "is_right": false
+          },
+          {
+            "no": 6,
+            "question": "Nếu X~Bin(n,p) thì Var(X)=?",
+            "correct": "B. np(1-p)",
+            "user_ans": "B. np(1-p)",
+            "is_right": true
+          },
+          {
+            "no": 7,
+            "question": "Phương trình Laplace là?",
+            "correct": "A. ∇²f=0",
+            "user_ans": "A. ∇²f=0",
+            "is_right": true
+          },
+          {
+            "no": 8,
+            "question": "Ma trận chéo có giá trị riêng là?",
+            "correct": "A. Các phần tử chéo",
+            "user_ans": "C. 1",
+            "is_right": false
+          },
+          {
+            "no": 9,
+            "question": "Trong hệ tọa độ trụ $(\rho, \\phi, z)$, toán tử Gradient của hàm $f$ có thành phần theo $\\phi$ là:",
+            "correct": "\frac{1}{\rho} \frac{\\partial f}{\\partial \\phi}",
+            "user_ans": "\frac{1}{\rho^2} \frac{\\partial f}{\\partial \\phi}",
+            "is_right": false
+          },
+          {
+            "no": 10,
+            "question": "Divergence của F=(x,y,z) là?",
+            "correct": "C. 3",
+            "user_ans": "B. 2",
+            "is_right": false
+          },
+          {
+            "no": 11,
+            "question": "∫ e^{-2x} dx bằng?",
+            "correct": "A. -1/2 e^{-2x}+C",
+            "user_ans": "C. -2e^{-2x}",
+            "is_right": false
+          },
+          {
+            "no": 12,
+            "question": "∫_0^{π/2} sin^3 x dx bằng?",
+            "correct": "A. 2/3",
+            "user_ans": "C. 1/2",
+            "is_right": false
+          },
+          {
+            "no": 13,
+            "question": "Trong đại số, một vành không có ước của không và có đơn vị được gọi là:",
+            "correct": "A. Miền nguyên (Integral Domain)",
+            "user_ans": "D. Trường",
+            "is_right": false
+          },
+          {
+            "no": 14,
+            "question": "Tổng các bậc của các đỉnh trong một đồ thị luôn là một số:",
+            "correct": "A. Chẵn",
+            "user_ans": "D. Bằng số cạnh",
+            "is_right": false
+          },
+          {
+            "no": 15,
+            "question": "Trong Đại số tuyến tính, định lý Cayley-Hamilton phát biểu rằng:",
+            "correct": "A. Mọi ma trận vuông đều là nghiệm của đa thức đặc trưng của chính nó",
+            "user_ans": "B. Mọi ma trận đều có nghịch đảo",
+            "is_right": false
+          },
+          {
+            "no": 16,
+            "question": "∫_0^1 x^2(1-x) dx bằng?",
+            "correct": "A. 1/6",
+            "user_ans": "A. 1/6",
+            "is_right": true
+          }
+        ]
+      },
+      {
+        "id": "NGUY_20260216215349",
+        "date": "2026-02-16 21:53",
+        "subject": "Tiếng Anh",
+        "grade": "Lớp 9 (THCS)",
+        "score": 5,
+        "total": 16,
+        "pct": 31,
+        "time_sec": 23,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "They _____ married for 20 years by next month.",
+            "correct": "will have been",
+            "user_ans": "will be",
+            "is_right": false
+          },
+          {
+            "no": 2,
+            "question": "If I see him, I _____ him your message.",
+            "correct": "will give",
+            "user_ans": "will give",
+            "is_right": true
+          },
+          {
+            "no": 3,
+            "question": "Tomorrow at 3 PM, I _____ a meeting with my teacher.",
+            "correct": "will be having",
+            "user_ans": "am having",
+            "is_right": false
+          },
+          {
+            "no": 4,
+            "question": "I'm _____ my keys. Have you seen them?",
+            "correct": "looking for",
+            "user_ans": "looking for",
+            "is_right": true
+          },
+          {
+            "no": 5,
+            "question": "_____ it was raining, we went out.",
+            "correct": "Although",
+            "user_ans": "So",
+            "is_right": false
+          },
+          {
+            "no": 6,
+            "question": "She _____ always _____ her room on Sundays.",
+            "correct": "-/cleans",
+            "user_ans": "-/cleans",
+            "is_right": true
+          },
+          {
+            "no": 7,
+            "question": "I _____ my keys. I can't find them anywhere.",
+            "correct": "have lost",
+            "user_ans": "lost",
+            "is_right": false
+          },
+          {
+            "no": 8,
+            "question": "The car _____ he bought is very expensive.",
+            "correct": "which",
+            "user_ans": "which",
+            "is_right": true
+          },
+          {
+            "no": 9,
+            "question": "She _____ three books this month.",
+            "correct": "has read",
+            "user_ans": "reads",
+            "is_right": false
+          },
+          {
+            "no": 10,
+            "question": "I will meet you _____ Monday.",
+            "correct": "on",
+            "user_ans": "in",
+            "is_right": false
+          },
+          {
+            "no": 11,
+            "question": "We need to _____ our knowledge of technology.",
+            "correct": "improve",
+            "user_ans": "improving",
+            "is_right": false
+          },
+          {
+            "no": 12,
+            "question": "'I will be there at 5 PM,' he said. → He said he _____ there at 5 PM.",
+            "correct": "would be",
+            "user_ans": "will be",
+            "is_right": false
+          },
+          {
+            "no": 13,
+            "question": "I can't help _____ when I watch comedy shows.",
+            "correct": "laughing",
+            "user_ans": "laugh",
+            "is_right": false
+          },
+          {
+            "no": 14,
+            "question": "She is afraid _____ snakes.",
+            "correct": "of",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 15,
+            "question": "She is the _____ beautiful girl in the school.",
+            "correct": "most",
+            "user_ans": "many",
+            "is_right": false
+          },
+          {
+            "no": 16,
+            "question": "He _____ at 7 AM every day.",
+            "correct": "gets up",
+            "user_ans": "gets up",
+            "is_right": true
+          }
+        ]
+      },
+      {
+        "id": "NGUY_20260217024652",
+        "date": "2026-02-17 02:46",
+        "subject": "Vật Lý",
+        "grade": "Lớp 12 (THPT)",
+        "score": 0,
+        "total": 17,
+        "pct": 0,
+        "time_sec": 8,
+        "source": "ai",
+        "detail": [
+          {
+            "no": 1,
+            "question": "Tính năng lượng nghỉ của 1g vật chất (c = 3.10^8 m/s):",
+            "correct": "9.10^13 J",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 2,
+            "question": "Phản ứng phân hạch thường xảy ra với các hạt nhân:",
+            "correct": "Nặng như Urani",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 3,
+            "question": "Máy biến áp là thiết bị dùng để:",
+            "correct": "Thay đổi điện áp xoay chiều",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 4,
+            "question": "Hạt nhân nguyên tử được cấu tạo từ các hạt:",
+            "correct": "Proton và Neutron",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 5,
+            "question": "Đơn vị của cảm ứng từ là:",
+            "correct": "Tesla (T)",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 6,
+            "question": "Trong hiện tượng cảm ứng điện từ, nếu từ thông qua mạch tăng theo quy luật Phi = 2.t (Wb) thì suất điện động cảm ứng trong mạch là:",
+            "correct": "-2 V",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 7,
+            "question": "Phản ứng nhiệt hạch: 2-D + 3-T -> 4-He + n + 17,6 MeV. Biết năng lượng liên kết riêng của D là 1,1 MeV/nucl, của T là 2,8 MeV/nucl. Năng lượng liên kết riêng của He là:",
+            "correct": "7,075 MeV/nucl",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 8,
+            "question": "Tính nhiệt lượng cần cung cấp để làm 200g nước đá ở -10°C nóng chảy hoàn toàn thành nước ở 0°C. Biết c_đá = 2100 J/kg.K, L = 3,34.10^5 J/kg.",
+            "correct": "71000 J",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 9,
+            "question": "Ứng dụng của hiện tượng nóng chảy là:",
+            "correct": "Đúc tượng, chuông",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 10,
+            "question": "Một vật nặng 100g treo vào lò xo có độ cứng k = 40 N/m. Tác dụng một ngoại lực cưỡng bức F = F0.cos(omega.t). Khi omega bằng bao nhiêu thì biên độ dao động đạt cực đại?",
+            "correct": "20 rad/s",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 11,
+            "question": "Pin quang điện hoạt động dựa trên hiện tượng:",
+            "correct": "Quang điện trong",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 12,
+            "question": "Một vật thực hiện đồng thời hai dao động điều hòa cùng phương: x1 = 3.cos(10t) cm và x2 = 4.sin(10t) cm. Biên độ dao động tổng hợp là:",
+            "correct": "5 cm",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 13,
+            "question": "Chất rắn nào sau đây là chất rắn vô định hình?",
+            "correct": "Thủy tinh",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 14,
+            "question": "Hạt nhân 235-U hấp thụ một neutron chậm và phân hạch thành 95-Mo và 139-La. Phản ứng này phát ra bao nhiêu hạt neutron?",
+            "correct": "2 hạt",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 15,
+            "question": "Nguyên lí I nhiệt động lực học được diễn đạt qua công thức delta_U = Q + A. Nếu vật nhận nhiệt lượng và sinh công thì:",
+            "correct": "Q > 0, A < 0",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 16,
+            "question": "Một electron bay vào từ trường đều B = 0,1T với vận tốc v = 2.10^6 m/s theo phương hợp với B góc 30 độ. Lực Lorentz có độ lớn:",
+            "correct": "1,6.10^-14 N",
+            "user_ans": "—",
+            "is_right": false
+          },
+          {
+            "no": 17,
+            "question": "Cường độ dòng điện cực đại trong mạch dao động LC là I0. Khi cường độ dòng điện i = I0/2 thì năng lượng điện trường bằng bao nhiêu lần năng lượng từ trường?",
+            "correct": "3 lần",
+            "user_ans": "—",
+            "is_right": false
+          }
+        ]
+      }
+    ]
+  },
+  "TrucAnh": {
+    "created_at": "2026-02-15 22:36",
+    "exams": []
+  }
+}
